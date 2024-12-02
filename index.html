@@ -161,11 +161,11 @@
                 <h2 class="section-title">Contact</h2>
             
                 <div class="contact__container bd-grid">
-                    <form action="mailto:kuntalbej274@gmail.com" method="POST" enctype="text/plain" class="contact__form" onsubmit="return validateForm()">
-                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
-                        <input type="email" name="email" placeholder="Email" class="contact__input" required>
-                        <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
-                        <input type="submit" value="Send" class="contact__button button">
+                    <form id="contactForm" class="contact__form">
+                        <input type="text" id="name" name="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" id="email" name="email" placeholder="Email" class="contact__input" required>
+                        <textarea id="message" name="message" placeholder="Message" class="contact__input" required></textarea>
+                        <button type="submit" class="contact__button button">Send</button>
                     </form>
                 </div>
             </section>
@@ -189,6 +189,9 @@
 
         <!--===== MAIN JS =====-->
         <script src="main.js"></script>
+        <script type="text/javascript">
+            emailjs.init('l743YoN8TGT2ovX7g')
+          </script>
     </body>
 
 
