@@ -1,7 +1,6 @@
 
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
