@@ -53,3 +53,30 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+
+// Initialize EmailJS
+emailjs.init('l743YoN8TGT2ovX7g'); // Your public key
+
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the form from refreshing the page
+
+    // Collect form data
+    const templateParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+    };
+
+    // Send email
+    emailjs.send('service_yx7buth', 'template_2akpnns', templateParams)
+        .then(function (response) {
+            alert('Message sent successfully!');
+            document.getElementById('contactForm').reset(); // Reset the form fields
+        }, function (error) {
+            alert('Failed to send message. Please try again later.');
+            console.error('Error:', error);
+        });
+});
+
