@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Indie+Flower&family=Protest+Revolution&family=Rock+Salt&family=Rosarivo:ital@0;1&display=swap');
 
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -535,13 +536,17 @@ img {
   }
 }
 
-.web designer{
-  font-size: 6rem;
-  white-space: nowrap; /* Keeps the text on one line */
-  overflow: hidden; /* Hides overflowing text */
-  border-right: 2px solid #00ff6a; /* Cursor */
-  width: 24ch; /* Adjust width to desired typing length */
-  animation: typing 4s steps(24, end), blink 0.5s step-end infinite;
+.typing {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #0D1730;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid currentColor; /* cursor */
+  animation: typing 3s steps(14, end), blink 0.7s step-end infinite;
 }
 
 @keyframes typing {
@@ -549,12 +554,15 @@ img {
     width: 0;
   }
   to {
-    width: 24ch; /* Match the width of the container */
+    width: 14ch; /* Adjust based on exact text length */
   }
 }
 
 @keyframes blink {
-  50% {
+  0%, 100% {
     border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
   }
 }

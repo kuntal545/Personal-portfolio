@@ -68,6 +68,17 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         email: document.getElementById('email').value,
         message: document.getElementById('message').value,
     };
+    
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed(".typed-text", {
+      strings: ["Web Designer", "Frontend Developer", "Tech Enthusiast"], // Add more titles if you want
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+  });
+
+
 
     // Send email
     emailjs.send('service_yx7buth', 'template_2akpnns', templateParams)
