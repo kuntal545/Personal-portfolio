@@ -113,4 +113,3 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
             console.error('Error:', error);
         });
 });
-
