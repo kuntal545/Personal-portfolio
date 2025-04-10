@@ -383,8 +383,9 @@ img {
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  margin-left: auto;
+  margin: 0 auto; /* this centers it */
 }
+
 
 /* ===== FOOTER =====*/
 .footer {
@@ -566,3 +567,45 @@ img {
     border-color: currentColor;
   }
 }
+/* Light theme (default) is already your base */
+
+.dark-theme {
+  background-color: #1e1e2f;
+  color: #f1f1f1;
+}
+
+.dark-theme .nav__menu,
+.dark-theme .nav__link,
+.dark-theme .home__title-color,
+.dark-theme .section-title,
+.dark-theme .skills__subtitle,
+.dark-theme .skills__name,
+.dark-theme .footer__title,
+.dark-theme .footer__copy {
+  color: #f1f1f1;
+}
+
+/* Dark theme navbar background */
+.dark-theme .nav__menu {
+  background-color: #121212;
+}
+.dark-theme .l-header {
+  background-color: #121212;
+}
+
+/* Dark theme nav links */
+.dark-theme .nav__link {
+  color: #f1f1f1;
+}
+
+/* Highlight active nav link */
+.dark-theme .nav__link.active-link {
+  color: #00ffff; /* or any accent color you like */
+}
+
+/* On hover (optional) */
+.dark-theme .nav__link:hover {
+  color: #5009e9;
+}
+
+

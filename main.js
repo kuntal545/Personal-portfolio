@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.classList.replace('bx-moon', 'bx-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+
+        // Toggle icon
+        if (document.body.classList.contains('dark-theme')) {
+            themeToggle.classList.replace('bx-moon', 'bx-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeToggle.classList.replace('bx-sun', 'bx-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
